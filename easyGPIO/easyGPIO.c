@@ -64,25 +64,6 @@ void pinMode(int port, int pin, int dir, int pull_up_down_na)
 {
 	switch (port){
 
-	case adcgpio:
-		switch (pin){
-
-		case 1:
-			// Insert adcGpioMode here
-			break;
-
-		case 2:
-			// Insert adcGpioMode here
-			break;
-
-		case 3:
-			// Insert adcGpioMode here
-			break;
-
-		case 4:
-			// Insert adcGpioMode here
-			break;
-		}
 	case 1: // Port 1.X
 		switch (pin){
 
@@ -316,7 +297,7 @@ case 2: // Port 2.X
 		case 0:
 			switch (dir){
 						case 1:
-						P2DIR ^= BIT0; //XOR toggler værdien af bit0 aka 0x0001
+						P2DIR ^= BIT0; //XOR toggler vÃ¦rdien af bit0 aka 0x0001
 						P2SEL &= (~BIT0);
 						P2SEL2 &= (~BIT0);
 						P2OUT &=~BIT0;
