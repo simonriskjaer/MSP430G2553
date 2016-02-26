@@ -16,12 +16,6 @@ char rxArray[5] = {0, 0, 0, 0, 0};
  ************************************************************/
 void spiMode(char device);
 void spiWrite(char device, int byte1, int byte2, int byte3, int byte4, int byte5);
-void dacWrite(int channel, int value);
-void adcMode(char mode);
-unsigned long adcRead(char reg, char bytes);
-void adcGPIO(char pin, char state);
-void adcGpioMode(char pin, char enable_disable_gpio);
-void adcReset();
 
 /************************************************************
  DAC and ADC macros
@@ -33,10 +27,6 @@ void adcReset();
 // DAC channel select
 #define channel_a (1)
 #define channel_b (2)
-
-// Maximum & and minimum DAC output
-#define MAX (4095)
-#define MIN (1)
 
 // Disable macro for DAC
 #define DISABLE (0)
